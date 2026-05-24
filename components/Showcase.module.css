@@ -1,0 +1,85 @@
+.showcase {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 100px 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.text .section-sub { margin-bottom: 0; }
+
+.featureList { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2rem; }
+.featureItem { display: flex; gap: 1rem; align-items: flex-start; }
+.featureIcon {
+  width: 36px; height: 36px;
+  background: rgba(99,102,241,0.1);
+  border: 1px solid rgba(99,102,241,0.2);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.featureItem h4 { font-family: var(--font-head); font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+.featureItem p { font-size: 0.82rem; color: var(--muted); font-weight: 300; line-height: 1.6; }
+
+.phoneWrap { display: flex; justify-content: center; }
+.phoneFrame {
+  width: 280px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 0 0 8px rgba(255,255,255,0.03), 0 40px 80px rgba(0,0,0,0.5), 0 0 60px rgba(99,102,241,0.12);
+  padding: 16px;
+}
+.phoneScreen { background: #080c14; border-radius: 28px; overflow: hidden; padding: 16px; }
+.phoneHeader { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.phoneAvatar {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+.phoneName { font-size: 0.85rem; font-weight: 600; font-family: var(--font-head); }
+.phoneNic { font-size: 0.68rem; color: var(--accent); }
+.phoneLabel { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 10px; }
+
+.phoneMetrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 4px; }
+.phoneMet { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 10px 8px; text-align: center; }
+.phoneMetIcon { font-size: 14px; margin-bottom: 4px; }
+.phoneMetVal { font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; line-height: 1; }
+.phoneMetLbl { font-size: 0.55rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; margin-top: 2px; }
+
+.phoneSvcRow { display: flex; gap: 8px; margin-bottom: 8px; }
+.phoneSvc { flex: 1; background: var(--surface); border-radius: 10px; padding: 10px; border: 1px solid var(--border); font-size: 0.7rem; }
+.phonePurple { border-color: rgba(139,92,246,0.3); }
+.phoneOrange { border-color: rgba(245,158,11,0.3); }
+.phoneSvcIcon { font-size: 16px; margin-bottom: 4px; }
+.phoneSvcTitle { font-weight: 600; font-size: 0.72rem; }
+.phoneSvcSub { font-size: 0.6rem; color: var(--muted); }
+
+.phoneAlert {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent3);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.phoneAlert strong { color: var(--text); display: block; font-weight: 500; }
+.alertDanger { border-left-color: var(--danger); }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .showcase { padding: 70px 1.25rem; }
+}
